@@ -1,0 +1,33 @@
+    // navbar using mui material
+            
+// import React, { useState } from 'react'
+// import {AppBar, Button, Tab, Tabs, Toolbar} from '@mui/material'
+
+// const Header = () => {
+//   const [value,setValue]=useState()
+//   return (
+//     <>
+//           <AppBar style={{height:55,background:"pink"}}>
+//               <Toolbar>
+                  
+//                   <Tabs textColor="inherit" value={value} 
+//                   onChange={(e,value)=>
+//                   {
+//                     console.log(e)
+//                     setValue(value)
+//                   }}
+//                   indicatorColor='secondary'>
+//                       <Tab label="home"  />
+//                       <Tab label="services"   />
+//                       <Tab label="contact us" />
+//                       <Tab label="product" />
+//                   </Tabs>
+//                   <Button variant='contained' sx={{marginLeft:'auto',background:"#e38898"}}>Login</Button>
+                 
+//               </Toolbar>
+//           </AppBar>
+//     </>
+//   )
+// }
+
+// export default Header

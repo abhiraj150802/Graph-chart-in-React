@@ -1,38 +1,346 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jost",sans-serif;
+    
+}
+html{
+    font-size: 62.5%;
+    background-color: #eee;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+
+/**/
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main_nav{
+    background: rgb(18, 17, 18);
+    width: 100%;
+    height: 55px;
+    display: grid;
+    grid-template-columns: 100px 1fr 2fr 1fr 100px;
+ 
+     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+     position:sticky;
+     top: 0;
+    z-index: 1;
+    
+ 
+  
+}
+.logo{
+    color: #3b5998; 
+    grid-column: 2/3;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo h2{
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(#eee,rgb(69,57,248));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.logo h2 span{
+    font-size: 3.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.menu{
+    grid-column: 3/4;
+}
+.menu ul{
+   height: 55px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu ul li{
+   font-size: 1.8rem;
+}
+.menu ul li  a{
+    text-transform: capitalize;
+    color: #3b5998;
+    transition:0.5s;
+}
+.menu ul li:hover>a{
+     transform-origin: left;
+     color:rgba(35, 35, 240, 0.8);
+     
+     text-decoration: underline;
+     transition: 5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social_meida{
+    grid-column: 4/5;
+}
+
+.social_meida ul li{
+    font-size: 1.8rem;
+}
+.social_meida ul{
+    height: 55px;
+   display: grid;
+   grid-template-columns: 3fr repeat(3,1fr);
+   align-items: center; 
+  justify-content: flex-end;
+}
+.social_meida ul li{
+    text-align: left;
+}
+.social_meida ul li:first-child{
+    grid-column: 2/3;
+}
+
+
+/* components styling */
+
+
+
+/* home page styling */
+
+.home_container{
+    background: rgb(48, 46, 48);
+    color: white;
+}
+.landing_page{
+   
+    max-width: 90rem;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+     
+}
+
+.intro
+{
+    width: 600px;
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   font-weight: 600;
+   color: whitesmoke;
+   padding: 10px 20px;
+   margin: 0 10px;
+  
+}
+.hellow{
+  font-size: 1.75rem;
+  font-weight: 100;
+  margin: 4px;
+
+}
+.name{
+    font-family: "Georgia", Times, serif;
+    color: yellow;
+}
+.introText
+{
+    font-family: serif;
+    font-size: medium;
+    font-weight: 100;
+    margin: 4px;
+}
+.btn{
+    background: white;
+    margin: 1rem 0;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 2rem;
+   
+} 
+
+
+
+
+
+
+
+
+
+.mian_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 26px;
+}
+
+.heading{
+    font-size: 20px;
+    color: #7a7ade;
+}
+.graph{
+   
+    margin: 10px;
+    background: #c4c0c0;
+    border: 2px solid #6767d8;
+}
+.education{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+   
+} 
+
+.sec_section{
+    
+    position: absolute;
+    top:56px;
+    background: #4b4e52;
+    width:900px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow:0px 11px 9px 14px rgb(83 85 87 / 48%);
+    margin:10px 5px;
+}
+
+
+.card1{
+   
+    width:300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 1.2rem;
+    gap: 10px;
+    background: #707070;
+    /* background: whitesmoke; */
+    margin:10px 5px;
+    padding: 10px 5px;
+
+}
+.content_1{
+    
+    width: 250px;
+    height:120px;
+    display: flex;
+    
+    flex-direction: column;
+    padding-bottom: 1.2rem;
+    gap: 8px;
+
+}
+.content_2{
+    
+    width: 250px;
+    height:70px;
+    display: flex;
+    
+    flex-direction: column;
+    padding-bottom: 1.2rem;
+    gap: 8px;
+}
+.content_3{
+    
+    width: 250px;
+    height:70px;
+    display: flex;
+    
+    flex-direction: column;
+    padding-bottom: 1.2rem;
+    gap: 8px;
+
+}
+
+.card h4{
+    
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-shadow: 1px 0px 4px rgb(7, 13, 10);
+    color: aquamarine;
+}
+.card p{
+    font-size: 12px;
+    font-weight: 400;
+    color:white;
+}
+.card1 .card2 h2{
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-shadow: 1px 0px 4px rgb(7, 13, 10);
+}
+.card1  p{
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-shadow: 1px 0px 4px rgb(7, 13, 12);
+    
+}
+#main_h{
+ 
+ color: #abc3f5;
+ font-size: large;
+ 
+}
+#heading{
+    color: #2ddba1;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/*  card 2 */
+
+
+.card2{
+
+    width:300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 1.2rem;
+    gap: 10px;
+    background: #707070;
+    /* background: whitesmoke; */
+    margin:10px 5px;
+    padding: 10px 5px;
+}
+.card2 div{
+   
+    width: 200px;
+    
+    gap: 15px;
+    align-items: center;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.card2 li{
+    /* color: aquamarine; */
+    color: white;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-shadow: 1px 0px 4px rgb(7, 13, 12);
+    
+}
+.card2 div li{
+    font-family:'Poppins', sans-serif ;
+    gap: 20px;
+    padding-bottom: 2px;
 }

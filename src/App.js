@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import { Route, Routes } from "react-router-dom"
+import "./App.css"
+
+import Navbar from "./components/Navbar"
+import Home from "./components/Home"
+
+import PieChart from "./components/PieChart"
+import BarChart from "./components/BarChart"
+import LineChart from "./components/LineChart"
+
+
+
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/barchart" element={<BarChart />} />
+        <Route path="/linechart" element={<LineChart />} />
+        <Route path="/piechart" element={<PieChart />} />
+        {/* </Route> */}
+
+        {/* aha nested routing kiye hai ,isliye navbar mai outlet ka use karenge */}
+      </Routes>
+    </>
+  )
 }
 
-export default App;
+export default App
